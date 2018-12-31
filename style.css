@@ -1,0 +1,93 @@
+#universe {
+    background: url('universe.jpg');
+    background-size: cover;
+    position: relative;
+    width: 700px;
+    height: 1400px;
+}
+#earth {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    margin-top: -25px;
+    margin-left: -25px;
+    animation-name: revolution;
+    animation-duration: 10s;
+    animation: spin 3s linear infinite;
+
+}
+#sun {
+    width: 100px;
+    height: 100px;
+    background: orange;
+    border-radius: 100%;
+    background: radial-gradient(#f5c313, #fe7f1f);
+    position: absolute;
+    top: 500px;
+    left: 500px;
+    box-shadow: 0 0 0 #f5c91a;
+    animation: sun 7s infinite alternate;
+}
+#earthOrbit {
+    width: 800px;
+    height: 1000px;
+    /*border: 1px solid red;*/
+    position: absolute;
+    left: 150px;
+    top: 50px;
+    border-radius: 100%;
+    animation: revolution 100s infinite linear;
+}
+#moon {
+    width: 30px;
+    height: 30px;
+}
+#moonOrbit {
+    width: 150px;
+    height: 200px;
+    /*border: 1px solid blue; */
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    margin-left: -75px;
+    margin-top: -75px;
+    border-radius: 100%;
+    animation: revolution 10s infinite linear;
+}
+/*SOLAR FLARE ANIMATION*/
+
+@keyframes sun {
+    0% {
+        box-shadow: 0 0 50px #f5c91a;
+    }
+    50% {
+        box-shadow: 0 0 200px #f5c91a;
+    }
+    100% {
+        box-shadow: 0 0 50px #f5c91a;
+    }
+}
+
+/*EARTH REVOLUTION ANIMATION*/
+
+@keyframes revolution {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/*EARTH SPIN ANIMATION*/
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
